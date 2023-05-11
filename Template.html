@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+    <h1> This is home page</h1>
+</body>
+</html>
+<h1>Hello, {{ Tekla }}</h1>
+{#{% for i in range(10) %}#}
+{#    {% if i % 2 == 0 %}#}
+{#    <p> {{ i }} </p>#}
+{#    {% endif %}#}
+{#{% endfor %}#}
+{% for i in subjects %}
+    <p>საგანი: {{ i }}</p>
+    {% if i == 'Math' %}
+        <p>გამოცდა არის 16:00 საათზე </p>
+    {% elif i == 'IT' %}
+        <p>Exam at 17:00 </p>
+        {% else %}
+        <p>გამოცდა არის 18:00 საათზე </p>
+
+    {% endif %}
+{#    <p>{{ i }} </p>#}
+{% endfor %}
+</body>
+</html>
